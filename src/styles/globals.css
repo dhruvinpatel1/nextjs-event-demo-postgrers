@@ -1,0 +1,41 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.main_menu::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  background-color: #9E0851;
+  width: 100%;
+  height: 3px;
+  left: 0;
+}
+
+
+.new {
+  
+      background-color: transparent;
+      background-repeat: no-repeat;
+      background-image: url(https://thebrideshow.com/wp-content/uploads/2020/05/homepage-banner.jpg);
+      background-size: cover;
+      background-position: center top;
+      width: 100%;
+      height: 100%;
+      opacity: 1;
+      transform: translate(0px, 0px);
+      visibility: inherit;
+      z-index: 20;
+  
+}
+
+
+.ambassadorsimgs:hover>.ambassadorsimg {
+  transform: scale(1.1);
+  transition: all 0.2s ease-in-out;
+}
+
+.ambassadorsimgs {
+  transform: scale(1);
+  transition: all 0.2s ease-in-out;
+}
