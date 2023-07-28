@@ -1,13 +1,12 @@
 import Link from 'next/link'
 import React from 'react'
-import { useRouter } from 'next/router'
 import Image from 'next/image'
 
 
 export default function Ambassadors({ DubaiMenuData, DubaiAmbassadors }) {
 
     const DubaiMenu = DubaiMenuData.data.attributes
-    
+
     return (
         <>
             <div className='bg-[#FDF8F6] mt-8'>
@@ -30,7 +29,7 @@ export default function Ambassadors({ DubaiMenuData, DubaiAmbassadors }) {
                 <div className='grid grid-cols-4 mt-9 '>
                     {
                         DubaiAmbassadors.data && DubaiAmbassadors.data.attributes.gallery.map((image, index) => (
-                            <div>
+                            <div key={index}>
                            <Link href={image.link} className='ambassadorsimgs'><Image src={`${process.env.NEXT_PUBLIC_SITE_URL}${image.image.data.attributes.url}`} width={300} height={170} className='mb-5 ambassadorsimg' /></Link></div>
                         ))
                     }
